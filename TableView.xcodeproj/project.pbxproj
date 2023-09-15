@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		454971392AB4B87E009A4BC5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454971382AB4B87E009A4BC5 /* Movie.swift */; };
+		454971502AB4C1AC009A4BC5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4549714F2AB4C1AC009A4BC5 /* DataManager.swift */; };
 		4581A48A2AAD92C9007C5317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A4892AAD92C9007C5317 /* AppDelegate.swift */; };
 		4581A48C2AAD92C9007C5317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A48B2AAD92C9007C5317 /* SceneDelegate.swift */; };
 		4581A48E2AAD92C9007C5317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A48D2AAD92C9007C5317 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		454971382AB4B87E009A4BC5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		4549714F2AB4C1AC009A4BC5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4581A4862AAD92C9007C5317 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4581A4892AAD92C9007C5317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4581A48B2AAD92C9007C5317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				454971382AB4B87E009A4BC5 /* Movie.swift */,
+				4549714F2AB4C1AC009A4BC5 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4581A48E2AAD92C9007C5317 /* ViewController.swift in Sources */,
+				454971502AB4C1AC009A4BC5 /* DataManager.swift in Sources */,
 				4581A48A2AAD92C9007C5317 /* AppDelegate.swift in Sources */,
 				4581A4A02AAD9A8F007C5317 /* MovieCell.swift in Sources */,
 				4581A48C2AAD92C9007C5317 /* SceneDelegate.swift in Sources */,
