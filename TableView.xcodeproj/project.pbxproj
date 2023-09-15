@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454971392AB4B87E009A4BC5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454971382AB4B87E009A4BC5 /* Movie.swift */; };
 		4581A48A2AAD92C9007C5317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A4892AAD92C9007C5317 /* AppDelegate.swift */; };
 		4581A48C2AAD92C9007C5317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A48B2AAD92C9007C5317 /* SceneDelegate.swift */; };
 		4581A48E2AAD92C9007C5317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A48D2AAD92C9007C5317 /* ViewController.swift */; };
 		4581A4912AAD92C9007C5317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4581A48F2AAD92C9007C5317 /* Main.storyboard */; };
 		4581A4932AAD92CA007C5317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4581A4922AAD92CA007C5317 /* Assets.xcassets */; };
 		4581A4962AAD92CA007C5317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4581A4942AAD92CA007C5317 /* LaunchScreen.storyboard */; };
+		4581A4A02AAD9A8F007C5317 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581A49F2AAD9A8F007C5317 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		454971382AB4B87E009A4BC5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4581A4862AAD92C9007C5317 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4581A4892AAD92C9007C5317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4581A48B2AAD92C9007C5317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		4581A4922AAD92CA007C5317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4581A4952AAD92CA007C5317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4581A4972AAD92CA007C5317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4581A49F2AAD9A8F007C5317 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454971352AB4B80C009A4BC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				454971382AB4B87E009A4BC5 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		454971362AB4B81C009A4BC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4581A48D2AAD92C9007C5317 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		454971372AB4B824009A4BC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4581A49F2AAD9A8F007C5317 /* MovieCell.swift */,
+				4581A48F2AAD92C9007C5317 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4581A47D2AAD92C9007C5317 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +85,11 @@
 		4581A4882AAD92C9007C5317 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				454971372AB4B824009A4BC5 /* Views */,
+				454971362AB4B81C009A4BC5 /* Controllers */,
+				454971352AB4B80C009A4BC5 /* Models */,
 				4581A4892AAD92C9007C5317 /* AppDelegate.swift */,
 				4581A48B2AAD92C9007C5317 /* SceneDelegate.swift */,
-				4581A48D2AAD92C9007C5317 /* ViewController.swift */,
-				4581A48F2AAD92C9007C5317 /* Main.storyboard */,
 				4581A4922AAD92CA007C5317 /* Assets.xcassets */,
 				4581A4942AAD92CA007C5317 /* LaunchScreen.storyboard */,
 				4581A4972AAD92CA007C5317 /* Info.plist */,
@@ -140,7 +170,9 @@
 			files = (
 				4581A48E2AAD92C9007C5317 /* ViewController.swift in Sources */,
 				4581A48A2AAD92C9007C5317 /* AppDelegate.swift in Sources */,
+				4581A4A02AAD9A8F007C5317 /* MovieCell.swift in Sources */,
 				4581A48C2AAD92C9007C5317 /* SceneDelegate.swift in Sources */,
+				454971392AB4B87E009A4BC5 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +324,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,8 +351,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
