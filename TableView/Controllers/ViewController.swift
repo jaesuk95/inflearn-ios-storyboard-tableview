@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
-//    var moviesArray: [Movie] = []
+    var moviesArray: [Movie] = []
     var movieDataManager = DataManager()
  
     @IBOutlet weak var tableView: UITableView!
@@ -19,12 +19,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tableView.dataSource = self
-        tableView.rowHeight = 120
-        movieDataManager.makeMovieData()
+        setupTableView()
+        setupDatas()
         
     }
-
+    
+    func setupTableView() {
+        // 델리게이트 패턴의 대리자 설정
+        tableView.dataSource = self
+        tableView.delegate = self
+        // 셀의 높이 설정
+        tableView.rowHeight = 120
+    }
+    
+    func setupDatas() {
+        movieDataManager.makeMovieData() // 일반적으로는 서버에 요청
+        moviesArray = movieDataManager.getMovieData()  // 데이터 받아서 뷰컨의 배열에 저장
+    }
 }
 
 
@@ -45,13 +56,33 @@ extension ViewController: UITableViewDataSource {
 //        cell.movieNameLabel.text = moviesArray[indexPath.row].movieName
 //        cell.descriptionLabel.text = moviesArray[indexPath.row].movieDescription
         
-        let array = movieDataManager.getMovieData()
-        let movie = array[indexPath.row]
-        cell.mainImageView.image = movie.movieImage
-        cell.movieNameLabel.text = movie.movieName
-        cell.descriptionLabel.text = movie.movieDescription
+        cell.mainImageView.image = moviesArray[indexPath.row].movieImage
+        cell.movieNameLabel.text = moviesArray[indexPath.row].movieName
+        cell.descriptionLabel.text = moviesArray[indexPath.row].movieDescription
+        cell.selectionStyle = .none
         
         return cell
     }
     
+}
+
+
+extension ViewController: UITableViewDelegate {
+    // to pass the tableView's data to next page, you would need this code underneath
+    // to pass data to next page
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
+        performSegue(withIdentifier: "toDetail", sender: indexPath)
+    }
+    
+    // prepare세그웨이(데이터 전달) // 이건 그냥 외워라
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let detailVC = segue.destination as! DetailViewController
+            let index = sender as! IndexPath
+            
+            // 배열에서 아이템을 꺼내서, 다음화면으로 전달
+            detailVC.movieData = moviesArray[index.row]
+        }
+    }
 }
