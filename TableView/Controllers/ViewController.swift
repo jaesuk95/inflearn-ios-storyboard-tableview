@@ -19,9 +19,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        title = "영화목록"
+        
         setupTableView()
         setupDatas()
-        
+    }
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        print(#function)
+        movieDataManager.updateMovieData()
+        moviesArray = movieDataManager.getMovieData()  // 다시 데이터 받아서 뷰컨의 배열에 저장
+        tableView.reloadData()
     }
     
     func setupTableView() {
@@ -43,7 +51,7 @@ extension ViewController: UITableViewDataSource {
     // return how many contents on rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(#function)
-        return movieDataManager.getMovieData().count
+        return moviesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,8 +78,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     // to pass the tableView's data to next page, you would need this code underneath
     // to pass data to next page
+    // 셀이 선택이 되었을때 어떤 동작을 할 것인지 뷰컨트롤러에게 물어봄
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
+        // 세그웨이를 실행
         performSegue(withIdentifier: "toDetail", sender: indexPath)
     }
     
